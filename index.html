@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Student Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>🎓 SmartCalc</h2>
+
+        <nav>
+            <a href="#" class="active" data-page="dashboard">🏠 Dashboard</a>
+            <a href="#" data-page="scientific">🧮 Scientific Calculator</a>
+            <a href="#" data-page="attendance">📅 Attendance</a>
+            <a href="#" data-page="study">📚 Study Planner</a>
+            <a href="#" data-page="cgpa">🎯 CGPA Predictor</a>
+            <a href="#" data-page="history">📋 History</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="#">⚙ Settings</a>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header>
+            <div>
+                <h1>Dashboard</h1>
+                <p>Your Personal Academic Assistant</p>
+            </div>
+
+            <div class="profile">
+                👤 Student
+            </div>
+        </header>
+
+
+        <!-- Overview Cards -->
+        <section class="overview">
+
+            <div class="card">
+                <h3>Current CGPA</h3>
+                <h2 id="dashboardCurrentCGPA">8.61</h2>
+                <p>Your academic performance</p>
+            </div>
+
+            <div class="card">
+                <h3>Target CGPA</h3>
+                <h2 id="dashboardTargetCGPA">9.00</h2>
+                <p>Your academic goal</p>
+            </div>
+
+            <div class="card">
+                <h3>Attendance</h3>
+                <h2 id="dashboardAttendance">0%</h2>
+                <p>Current attendance</p>
+            </div>
+
+            <div class="card">
+                <h3>Study Hours</h3>
+                <h2 id="dashboardStudyHours">0 hrs</h2>
+                <p>Total planned study hours</p>
+            </div>
+            <div class="card">
+                <h3>Completed Semesters</h3>
+                <p id="dashboardCompletedSemesters">0</p>
+            </div>
+            <div class="card">
+                 <h3>Remaining Semesters</h3>
+                 <p id="dashboardRemainingSemesters">0</p>
+            </div>
+
+        </section>
+
+<section class="profile-section">
+    <h2>Student Academic Profile</h2>
+    <p>Enter your academic details to personalize your dashboard.</p>
+
+    <div class="calculator">
+        <label>Current CGPA:</label>
+        <input type="number" id="profileCurrentCGPA"
+               placeholder="Example: 8.61" step="0.01">
+
+        <br><br>
+
+        <label>Target CGPA:</label>
+        <input type="number" id="profileTargetCGPA"
+               placeholder="Example: 9.00" step="0.01">
+
+        <br><br>
+
+        <label>Completed Semesters:</label>
+        <input type="number" id="profileCompletedSemesters"
+               placeholder="Example: 2">
+
+        <br><br>
+
+        <label>Total Semesters:</label>
+        <input type="number" id="profileTotalSemesters" value="8">
+
+        <br><br>
+
+        <button id="saveProfile">Save Academic Profile</button>
+        <p id="profileMessage"></p>
+    </div>
+</section>
+        <!-- Academic Tools -->
+        <section class="modules">
+
+            <h2>Academic Tools</h2>
+
+            <div class="module-grid">
+
+                <div class="module-card">
+                    <h3>🧮 Scientific Calculator</h3>
+                    <p>Perform mathematical operations.</p>
+                    <button onclick="openScientificCalculator()">Open Calculator</button>
+                </div>
+
+                <div class="module-card">
+                    <h3>📅 Attendance Calculator</h3>
+                    <p>Calculate and predict attendance.</p>
+                    <button onclick="openAttendanceCalculator()">Open Attendance</button>
+                </div>
+
+                <div class="module-card">
+                    <h3>📚 Smart Study Planner</h3>
+                    <p>Plan your study time effectively.</p>
+                    <button onclick="openStudyPlanner()">Open Planner</button>
+                </div>
+
+                <div class="module-card">
+                    <h3>🎯 CGPA Target Predictor</h3>
+                    <p>Plan your academic goals.</p>
+                    <button onclick="openCGPAPredictor()">Open Predictor</button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Academic Progress -->
+        <section class="progress">
+
+            <h2>Academic Progress</h2>
+
+            <p>CGPA Target Progress</p>
+
+            <progress id="cgpaProgress" value="8.61" max="10"></progress>
+
+            <p id="progressMessage">
+                Keep working towards your academic goals!
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
